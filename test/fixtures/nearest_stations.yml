@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  route_name: MyText
+  station_name: MyText
+  minutes_on_foot: 1
+  property: one
+
+two:
+  route_name: MyText
+  station_name: MyText
+  minutes_on_foot: 1
+  property: two
