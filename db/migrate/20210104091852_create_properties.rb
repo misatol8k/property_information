@@ -9,6 +9,6 @@ class CreateProperties < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
-    add_index :properties, :property_name, unique: true
+    add_index :properties, :property_name
   end
 end
