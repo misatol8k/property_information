@@ -2,5 +2,18 @@
 <p>物件名: <%= @property.property_name %></p>
 <p>賃料: <%= @property.rent %>円</p>
 <p>住所: <%= @property.address %></p>
-<p>築年数: <%= @property.age %>年</p>
-<p>備考: <%= @property.remark %></p>
+<p>築年数 <%= @property.age %>年</p>
+<p>備考 <%= @property.remark %></p>
+
+
+<% @property.nearest_stations.each_with_index do |nearest_station, index| %>
+  <%= fields_for :nearest_stations, nearest_station do |f| %>
+  <h4>最寄り駅 <%= index + 1 %></h4>
+    <p>路線名 <%= nearest_station.route_name %></p>
+    <p>駅名 <%= nearest_station.station_name %></p>
+    <p>徒歩分数 <%= nearest_station.minutes_on_foot %>分</p>
+  <% end %>
+<% end %>
+
+<%= link_to '編集', edit_property_path(@property) %>|
+<%= link_to '戻る', properties_path %>
