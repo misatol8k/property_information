@@ -31,7 +31,7 @@ class PropertiesController < ApplicationController
 
   def update
     if @property.update(property_params)
-      render :show, notice: "更新しました！"
+      redirect_to property_path(@property.id), notice: "更新しました！"
     else
       render :edit
     end
