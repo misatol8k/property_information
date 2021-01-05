@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+ h1, h3{
+   padding-left: 0.5em;
+ }
+p{
+  padding-left: 2em;
+}
+table{
+  padding-left: 2em;
+  border-spacing: 5px;
+}
+th{
+  min-width: 3em;
+}
+label{
+  display: block;
+}
