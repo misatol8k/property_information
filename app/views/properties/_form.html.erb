@@ -35,6 +35,15 @@
     <%= form.text_field :remark %>
   </div>
 
+  <%= form.fields_for :nearest_stations do |f| %>
+    <%= f.label :route_name %>
+    <%= f.text_field :route_name %>
+    <%= f.label :station_name %>
+    <%= f.text_field :station_name %>
+    <%= f.label :minutes_on_foot %>
+    <%= f.text_field :minutes_on_foot %>
+  <% end %>
+
   <div class="actions">
     <%= form.submit %>
   </div>
