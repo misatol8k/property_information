@@ -19,12 +19,10 @@ class PropertiesController < ApplicationController
     @property = Property.new(property_params)
     if params[:back]
       render :new
+    elsif @property.save
+      redirect_to property_path(@property.id), notice: "登録しました！"
     else
-      if @property.save
-        redirect_to property_path(@property.id), notice: "登録しました！"
-      else
-        render :new
-      end
+      render :new
     end
   end
 
